@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>culturaActiva - Eventos Culturales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="inicio"></div>
+    
+    <nav class="navbar">
+        <div class="navbar-logo">culturaActiva</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#calendario">Calendario</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-top">
+            <h1>culturaActiva</h1>
+            <p>Descubre los mejores eventos culturales de tu ciudad</p>
+            <button class="login-button">Iniciar sesión</button>
+        </div>
+        <div class="search-bar">
+            <form>
+                <input type="text" class="search-input" placeholder="Buscar eventos, categorías, lugares...">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <section id="eventos" class="eventos-section">
+        <div class="eventos-container">
+            <div class="eventos-header">
+                <span class="eventos-badge">🎪 Eventos Destacados</span>
+                <h2>Próximos Eventos</h2>
+                <p>Descubre los mejores eventos culturales que hemos seleccionado para ti</p>
+            </div>
+
+            <main>
+                <article class="evento-card">
+                    <h3>Concierto de Jazz en el Parque</h3>
+                    <p><strong>Categoría:</strong> Música</p>
+                    <p><strong>Fecha:</strong> 25 Nov 2025</p>
+                    <p><strong>Hora:</strong> 19:00 hrs</p>
+                    <p><strong>Lugar:</strong> Parque Central</p>
+                    <p>Una noche mágica con los mejores músicos de jazz de la ciudad.</p>
+                    <button>Más información</button>
+                </article>
+
+                <article class="evento-card">
+                    <h3>Arte Contemporáneo en el Museo</h3>
+                    <p><strong>Categoría:</strong> Arte</p>
+                    <p><strong>Fecha:</strong> 28 Nov 2025</p>
+                    <p><strong>Hora:</strong> 11:00 hrs</p>
+                    <p><strong>Lugar:</strong> Museo de Arte Moderno</p>
+                    <p>Descubre las obras más innovadoras de artistas emergentes.</p>
+                    <button>Más información</button>
+                </article>
+
+                <article class="evento-card">
+                    <h3>Festival de Cine Independiente</h3>
+                    <p><strong>Categoría:</strong> Cine</p>
+                    <p><strong>Fecha:</strong> 02 Dic 2025</p>
+                    <p><strong>Hora:</strong> 18:00 hrs</p>
+                    <p><strong>Lugar:</strong> Teatro Municipal</p>
+                    <p>Proyección de cortometrajes y largometrajes independientes.</p>
+                    <button>Más información</button>
+                </article>
+
+                <article class="evento-card">
+                    <h3>Taller de Cerámica</h3>
+                    <p><strong>Categoría:</strong> Taller</p>
+                    <p><strong>Fecha:</strong> 05 Dic 2025</p>
+                    <p><strong>Hora:</strong> 16:00 hrs</p>
+                    <p><strong>Lugar:</strong> Centro Cultural</p>
+                    <p>Aprende técnicas tradicionales de cerámica con artesanos locales.</p>
+                    <button>Más información</button>
+                </article>
+
+                <article class="evento-card">
+                    <h3>Noche de Poesía</h3>
+                    <p><strong>Categoría:</strong> Literatura</p>
+                    <p><strong>Fecha:</strong> 08 Dic 2025</p>
+                    <p><strong>Hora:</strong> 20:00 hrs</p>
+                    <p><strong>Lugar:</strong> Café Literario</p>
+                    <p>Recital de poesía con poetas locales e internacionales.</p>
+                    <button>Más información</button>
+                </article>
+
+                <article class="evento-card">
+                    <h3>Danza Contemporánea</h3>
+                    <p><strong>Categoría:</strong> Danza</p>
+                    <p><strong>Fecha:</strong> 12 Dic 2025</p>
+                    <p><strong>Hora:</strong> 21:00 hrs</p>
+                    <p><strong>Lugar:</strong> Teatro Principal</p>
+                    <p>Compañía nacional presenta su última obra de danza contemporánea.</p>
+                    <button>Más información</button>
+                </article>
+            </main>
+        </div>
+    </section>
+
+    <section id="calendario" class="calendario-section">
+        <div class="calendario-container">
+            <div class="calendario-header">
+                <span class="calendario-badge">📅 Calendario</span>
+                <h2>Próximamente</h2>
+                <p>Aquí podrás ver todos los eventos en formato calendario</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias" class="categorias-section">
+        <div class="categorias-container">
+            <div class="categorias-header">
+                <span class="categorias-badge">🎭 Categorías</span>
+                <h2>Explora por Categoría</h2>
+                <p>Descubre eventos culturales organizados por tus intereses favoritos</p>
+            </div>
+
+            <div class="categorias-grid">
+                <div class="categoria-card musica">
+                    <div class="categoria-icon">🎵</div>
+                    <h3>Música</h3>
+                    <p>Conciertos, festivales y recitales en vivo</p>
+                    <span class="categoria-count">12 eventos</span>
+                </div>
+
+                <div class="categoria-card arte">
+                    <div class="categoria-icon">🎨</div>
+                    <h3>Arte</h3>
+                    <p>Exposiciones, galerías y arte contemporáneo</p>
+                    <span class="categoria-count">8 eventos</span>
+                </div>
+
+                <div class="categoria-card cine">
+                    <div class="categoria-icon">🎬</div>
+                    <h3>Cine</h3>
+                    <p>Películas, documentales y festivales de cine</p>
+                    <span class="categoria-count">15 eventos</span>
+                </div>
+
+                <div class="categoria-card teatro">
+                    <div class="categoria-icon">🎭</div>
+                    <h3>Teatro</h3>
+                    <p>Obras teatrales, comedia y performances</p>
+                    <span class="categoria-count">10 eventos</span>
+                </div>
+
+                <div class="categoria-card danza">
+                    <div class="categoria-icon">💃</div>
+                    <h3>Danza</h3>
+                    <p>Ballet, danza contemporánea y folklore</p>
+                    <span class="categoria-count">6 eventos</span>
+                </div>
+
+                <div class="categoria-card literatura">
+                    <div class="categoria-icon">📚</div>
+                    <h3>Literatura</h3>
+                    <p>Lecturas, presentaciones y clubes de lectura</p>
+                    <span class="categoria-count">9 eventos</span>
+                </div>
+
+                <div class="categoria-card talleres">
+                    <div class="categoria-icon">✨</div>
+                    <h3>Talleres</h3>
+                    <p>Actividades prácticas y cursos creativos</p>
+                    <span class="categoria-count">14 eventos</span>
+                </div>
+
+                <div class="categoria-card gastronomia">
+                    <div class="categoria-icon">🍷</div>
+                    <h3>Gastronoma</h3>
+                    <p>Degustaciones, festivales y catas</p>
+                    <span class="categoria-count">7 eventos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-container">
+            <div class="contacto-header">
+                <span class="contacto-badge">📧 Contáctanos</span>
+                <h2>¿Tienes alguna pregunta?</h2>
+                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo pronto.</p>
+            </div>
+            
+            <div class="contacto-content">
+                <form class="contacto-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar mensaje</button>
+                </form>
+                
+                <div class="contacto-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Ubicación</h3>
+                        <p>Calle Principal 123<br>Ciudad, CP 12345</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>info@culturaactiva.com<br>eventos@culturaactiva.com</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Teléfono</h3>
+                        <p>+34 123 456 789<br>Lunes a Viernes 9:00 - 18:00</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🕒</div>
+                        <h3>Horario</h3>
+                        <p>Lunes - Viernes: 9:00 - 20:00<br>Sábado - Domingo: 10:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 culturaActiva. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
