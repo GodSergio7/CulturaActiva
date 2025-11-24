@@ -286,6 +286,7 @@
 .login-footer p {
     color: #3b82f6;
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .register-link {
@@ -297,6 +298,31 @@
 
 .register-link:hover {
     color: #60a5fa;
+}
+
+.admin-login-link {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e0f2fe;
+}
+
+.admin-access-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.admin-access-btn:hover {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
 }
 
 .login-info {
