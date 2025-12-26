@@ -32,149 +32,151 @@
 
         <div class="admin-header">
             <div class="admin-welcome">
+                <div class="admin-icon">⚙️</div>
                 <div>
                     <h1>Panel de Administración</h1>
                     <p>Gestiona los eventos culturales de culturaActiva</p>
                 </div>
             </div>
 
-            <div class="admin-stats">
-                <div class="stat-card">
+            <div id="dashboard" class="dashboard-stats">
+                <div class="stat-card blue">
+                    <div class="stat-icon">📅</div>
                     <div class="stat-content">
-                        <div class="stat-number">87</div>
-                        <div class="stat-label">Eventos activos</div>
+                        <div id="stat-total-eventos" class="stat-number blue">0</div>
+                        <div class="stat-label">Eventos Totales</div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card green">
+                    <div class="stat-icon">✅</div>
                     <div class="stat-content">
-                        <div class="stat-number">2,543</div>
-                        <div class="stat-label">Usuarios registrados</div>
+                        <div id="stat-activos" class="stat-number green">0</div>
+                        <div class="stat-label">Eventos Activos</div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card orange">
+                    <div class="stat-icon">👥</div>
                     <div class="stat-content">
-                        <div class="stat-number">156</div>
-                        <div class="stat-label">Eventos este mes</div>
+                        <div id="stat-usuarios" class="stat-number orange">0</div>
+                        <div class="stat-label">Usuarios Registrados</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="admin-content">
-            <div class="form-section">
-                <div class="section-header">
-                    <h2>Editor de Eventos</h2>
-                    <p>Crea o modifica eventos culturales</p>
+
+            <div class="main-column" style="display: flex; flex-direction: column; gap: 30px;">
+
+                <div id="eventos" class="form-section">
+                    <div class="section-header">
+                        <h2>Editor de Eventos</h2>
+                        <p>Crea o modifica eventos culturales</p>
+                    </div>
+
+                    <form class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="evento-titulo">Título del evento *</label>
+                                <input type="text" id="evento-titulo" name="titulo"
+                                    placeholder="Ej: Concierto de Jazz en el Parque" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="evento-categoria">Categoría *</label>
+                                <select id="evento-categoria" name="categoria" required>
+                                    <option value="">Selecciona una categoría</option>
+                                    <option value="Música">🎵 Música</option>
+                                    <option value="Arte">🎨 Arte</option>
+                                    <option value="Cine">🎬 Cine</option>
+                                    <option value="Teatro">🎭 Teatro</option>
+                                    <option value="Danza">💃 Danza</option>
+                                    <option value="Literatura">📚 Literatura</option>
+                                    <option value="Talleres">✨ Talleres</option>
+                                    <option value="Gastronomía">🍷 Gastronomía</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="evento-estado">Estado *</label>
+                                <select id="evento-estado" name="estado" required>
+                                    <option value="active">✅ Activo</option>
+                                    <option value="draft">📝 Borrador</option>
+                                    <option value="cancelled">❌ Cancelado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="evento-fecha">Fecha *</label>
+                                <input type="date" id="evento-fecha" name="fecha" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="evento-hora">Hora *</label>
+                                <input type="time" id="evento-hora" name="hora" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="evento-lugar">Lugar *</label>
+                                <input type="text" id="evento-lugar" name="lugar" placeholder="Ej: Parque Central"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="evento-precio">Precio (€)</label>
+                                <input type="number" id="evento-precio" name="precio" placeholder="0.00" min="0"
+                                    step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="evento-imagen">URL Imagen (Opcional)</label>
+                                <input type="text" id="evento-imagen" name="imagen" placeholder="https://...">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="evento-descripcion">Descripción *</label>
+                                <textarea id="evento-descripcion" name="descripcion" rows="5"
+                                    placeholder="Describe el evento..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Publicar evento</button>
+                        </div>
+                    </form>
                 </div>
 
-                <form class="admin-form">
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-titulo">Título del evento *</label>
-                            <input type="text" id="evento-titulo" name="titulo"
-                                placeholder="Ej: Concierto de Jazz en el Parque" required>
-                        </div>
+                <div id="usuarios" class="users-list-section">
+                    <div class="section-header">
+                        <h2>Gestión de Usuarios</h2>
+                        <p>Usuarios registrados en la plataforma</p>
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="evento-categoria">Categoría *</label>
-                            <select id="evento-categoria" name="categoria" required>
-                                <option value="">Selecciona una categoría</option>
-                                <option value="musica">🎵 Música</option>
-                                <option value="arte">🎨 Arte</option>
-                                <option value="cine">🎬 Cine</option>
-                                <option value="teatro">🎭 Teatro</option>
-                                <option value="danza">💃 Danza</option>
-                                <option value="literatura">📚 Literatura</option>
-                                <option value="talleres">✨ Talleres</option>
-                                <option value="gastronomia">🍷 Gastronomía</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="evento-estado">Estado *</label>
-                            <select id="evento-estado" name="estado" required>
-                                <option value="active">✅ Activo</option>
-                                <option value="draft">📝 Borrador</option>
-                                <option value="cancelled">❌ Cancelado</option>
-                                <option value="finished">🏁 Finalizado</option>
-                            </select>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-usuarios-body">
+                            </tbody>
+                        </table>
                     </div>
+                </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="evento-fecha">Fecha *</label>
-                            <input type="date" id="evento-fecha" name="fecha" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="evento-hora">Hora *</label>
-                            <input type="time" id="evento-hora" name="hora" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-lugar">Lugar *</label>
-                            <input type="text" id="evento-lugar" name="lugar"
-                                placeholder="Ej: Parque Central, Calle Principal 123" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="evento-precio">Precio (€)</label>
-                            <input type="number" id="evento-precio" name="precio" placeholder="0.00" min="0"
-                                step="0.01">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="evento-capacidad">Capacidad</label>
-                            <input type="number" id="evento-capacidad" name="capacidad" placeholder="Ej: 100" min="1">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-organizador">Organizador</label>
-                            <input type="text" id="evento-organizador" name="organizador"
-                                placeholder="Nombre del organizador o institución">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-imagen">URL de la imagen</label>
-                            <input type="url" id="evento-imagen" name="imagen"
-                                placeholder="https://ejemplo.com/imagen.jpg">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-descripcion">Descripción *</label>
-                            <textarea id="evento-descripcion" name="descripcion" rows="5"
-                                placeholder="Describe el evento de manera atractiva para los asistentes..."
-                                required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="evento-informacion">Información adicional</label>
-                            <textarea id="evento-informacion" name="informacion" rows="3"
-                                placeholder="Información extra: requisitos, materiales necesarios, accesibilidad, etc."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn-primary">Publicar evento</button>
-                    </div>
-                </form>
             </div>
-
             <div class="events-list-section">
                 <div class="section-header">
                     <h2>📋 Eventos Recientes</h2>
@@ -182,9 +184,9 @@
                 </div>
 
                 <div class="events-list">
-
                 </div>
             </div>
+
         </div>
     </div>
 

@@ -539,4 +539,106 @@
     .stat-number {
         font-size: 24px;
     }
+
+    /* =========================================
+   NUEVOS ESTILOS (RETO 3) - DASHBOARD & USUARIOS
+   ========================================= */
+
+/* --- A. TARJETAS DE ESTADÍSTICAS (Dashboard) --- */
+/* Reutilizamos tu estilo .stat-card pero añadimos colores específicos */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Modificamos ligeramente stat-card para que acepte colores dinámicos */
+.stat-card.blue { border-color: #60a5fa; }
+.stat-card.green { border-color: #34d399; }
+.stat-card.orange { border-color: #fbbf24; }
+
+/* Iconos con fondo de color suave */
+.stat-card.blue .stat-icon { background: rgba(96, 165, 250, 0.1); color: #2563eb; }
+.stat-card.green .stat-icon { background: rgba(52, 211, 153, 0.1); color: #059669; }
+.stat-card.orange .stat-icon { background: rgba(251, 191, 36, 0.1); color: #d97706; }
+
+/* Texto de los números */
+.stat-number.blue { background: linear-gradient(to right, #2563eb, #3b82f6); -webkit-background-clip: text; color: transparent; }
+.stat-number.green { background: linear-gradient(to right, #059669, #10b981); -webkit-background-clip: text; color: transparent; }
+.stat-number.orange { background: linear-gradient(to right, #d97706, #f59e0b); -webkit-background-clip: text; color: transparent; }
+
+/* --- B. SECCIÓN LISTA DE USUARIOS --- */
+.users-list-section {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    border: 2px solid #bfdbfe;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+    margin-top: 40px; /* Separación de la lista de eventos */
+}
+
+/* Tabla Responsive y Bonita */
+.table-responsive {
+    overflow-x: auto; /* Scroll horizontal en móviles */
+    border-radius: 12px;
+    border: 1px solid #e0f2fe;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ancho mínimo para que no se rompa */
+}
+
+.users-table thead {
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+}
+
+.users-table th {
+    padding: 16px 20px;
+    text-align: left;
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 2px solid #bfdbfe;
+}
+
+.users-table td {
+    padding: 16px 20px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.users-table tr:last-child td {
+    border-bottom: none;
+}
+
+.users-table tr:hover {
+    background-color: #f8fafc; /* Efecto hover suave */
+}
+
+/* Badge pequeño para la tabla */
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-badge.admin {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.user-badge.cliente {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
 }
