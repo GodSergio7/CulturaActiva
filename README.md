@@ -33,6 +33,7 @@ El desarrollo se ha dividido en 3 Retos principales:
 ## ✒️ Autores
 
 * **Sergio Vidal** - [TuGitHub](https://github.com/GodSergio7)
+* **Mohamed**
 
 ---
 *Proyecto desarrollado con fines educativos para el curso 2025-2026.*
