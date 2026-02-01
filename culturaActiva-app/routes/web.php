@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
 // Rutas públicas
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [App\Http\Controllers\EventoController::class, 'index'])->name('home');
 
 // Rutas de autenticación
 Route::get('/registro', [AuthController::class, 'mostrarRegistro'])->name('register');
@@ -26,7 +25,7 @@ Route::middleware('auth')->group(function () {
 
 // Rutas de admin (requieren login + ser admin)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::post('/eventos/crear', [AdminController::class, 'crearEvento'])->name('eventos.crear');
+    Route::delete('/eventos/{id}', [AdminController::class, 'eliminarEvento'])->name('eventos.eliminar');
 });
